@@ -1,25 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import TodoForm from './TodoForm';
+import TodoApp_MSY1126 from './TodoApp_MSY1126';
 
 function App() {
   return (
     <div className="App">
-      <TodoForm />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <TodoApp_MSY1126 />
           Learn React
-        </a>
-      </header>
     </div>
   );
 }
