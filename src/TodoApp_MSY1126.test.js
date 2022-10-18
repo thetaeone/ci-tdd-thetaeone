@@ -14,4 +14,12 @@ describe('<TodoApp_MSY1126/>', () => {
         getByText('TDD 배우기');
         getByText('react-testing-library');
     });
+    it('create new todo', () => {
+        const {getByplaceholderText, getByText} = render(<TodoApp_MSY1126 />);
+        fireEvent.change(getByplaceholderText('할 일을 입력하세요'),
+        {target: {value: "새 항목 추가하기"}}
+        );
+        fireEvent.click(getByText('등록'));
+        getByText("새 항목 추가하기");
+    });
 });
