@@ -33,10 +33,15 @@ const TodoApp_MSY1126 = () => {
             )
         );
     }, [todos]);
-    return <div>
+    const onRemove = useCallback(id => {
+        setTodos(
+            todos.filter(todo => todo.id != id)
+        );
+    }, [todos]);
+    return (<div>
         <TodoForm onInsert={onInsert}/>
         <TodoList todos={todos} onToggle={onToggle}/>
-    </div>;
+    </div>)
 };
 
 export default TodoApp_MSY1126;
