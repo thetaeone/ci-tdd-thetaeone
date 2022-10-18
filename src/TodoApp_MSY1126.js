@@ -1,4 +1,4 @@
-import React, {useState, useRef, useCallback} from "react";
+import React, { useState,useRef,useCallback } from "react";
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
@@ -19,20 +19,24 @@ const TodoApp_MSY1126 = () => {
     const onInsert = useCallback(text => {
         setTodos(
             todos.concat({
-                id : nextId.current,
+                id: nextId.current,
                 text,
                 done: false,
             })
         );
-        nextId.current += 1;
-    });
-
+        nextId.Current += 1;
+    },[todos]);
+    const onToggle = useCallback(id => {
+        setTodos(
+            todos.map(todo => 
+                todo.id === id ? {...todo, done: !todo.done} : todo
+            )
+        );
+    }, [todos]);
     return <div>
         <TodoForm onInsert={onInsert}/>
-        <TodoList todos = {todos} />
-        {/* <TodoList todos = {[]} /> */}
-
-        </div>;
+        <TodoList todos={todos} onToggle={onToggle}/>
+    </div>;
 };
 
 export default TodoApp_MSY1126;
