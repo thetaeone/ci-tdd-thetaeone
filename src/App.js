@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <TodoApp_thetaeone />
       Learn React
+      안녕
     </div>
   );
 }
