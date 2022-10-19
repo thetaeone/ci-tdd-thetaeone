@@ -43,6 +43,7 @@ const TodoApp_thetaeone = () => {
     },[todos]);
     return (
         <div>
+            <h1>taeone world!!!</h1>
             <TodoForm onInsert={onInsert}/>
             <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
         </div>
