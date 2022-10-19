@@ -40,7 +40,7 @@ const TodoApp_MSY1126 = () => {
     }, [todos]);
     return (<div>
         <TodoForm onInsert={onInsert}/>
-        <TodoList todos={todos} onToggle={onToggle}/>
+        <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
     </div>)
 };
 
