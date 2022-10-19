@@ -29,13 +29,13 @@ const TodoApp_MSY1126 = () => {
     const onToggle = useCallback(id => {
         setTodos(
             todos.map(todo => 
-                todo.id == id ? {...todo, done: !todo.done} : todo
+                todo.id === id ? {...todo, done: !todo.done} : todo
             )
         );
     }, [todos]);
     const onRemove = useCallback(id => {
         setTodos(
-            todos.filter(todo => todo.id != id)
+            todos.filter(todo => todo.id !== id)
         );
     }, [todos]);
     return (<div>
